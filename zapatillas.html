@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DSTOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="HTML/Imagenes/LOGO.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.html">DSTOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="Adidas.html">Zapatillas Adidas</a>
+                <a class="nav-item nav-link" href="Nike.html">Zapatillas Nike</a>
+                <a class="nav-item nav-link" href="Puma.html">Zapatillas Puma</a>
+                <a class="nav-item nav-link" href="Contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+        <!-- CONTENIDO -->
+    <div class="container-fluid mt-5 pt-5">
+        <h1 class="titulo-destacado">
+            Productos destacados 
+        </h1>
+        <div class="row">
+
+<!-- FILTRO Y ORDENAMIENTO -->
+<div class="col-md-3 sidebar">
+    <h4>Filtrar</h4>
+    <div class="mt-3">
+        <label for="priceRange">Precio máximo</label>
+        <input type="range" class="form-range" min="50000" max="200000" step="1000" id="priceRange">
+        <p>Hasta $<span id="rangeValue">200000</span></p>
+    </div>
+</div>
+
+<div class="col-md-9 mb-3 d-flex align-items-end justify-content-end">
+    <div>
+        <label for="orden">ORDENAR POR</label>
+        <select id="orden" class="form-control" style="width: 200px;" onchange="ordenarProductos()">
+            <option value="precioAsc">Precio: de bajo a alto</option>
+            <option value="precioDesc">Precio: de alto a bajo</option>
+            <option value="nombreAsc">Nombre: A-Z</option>
+            <option value="nombreDesc">Nombre: Z-A</option>
+        </select>
+    </div>
+</div>
+<div class="text-center mb-3">
+  <input type="text" id="buscador" class="form-control" placeholder="Buscar zapatillas..." style="max-width: 300px; margin: 0 auto;">
+</div>
+
+
+
+
+            <!-- PRODUCTOS -->
+            <div class="col-md-12">
+                <div class="row justify-content-center" id="productos">
+
+                    <!-- Producto 1 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-daily-3.0/FW7033.html" target="_blank">
+                            <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.15.jpeg" alt="Zapatillas Daily 3.0">
+                            </a>
+                            <p>Zapatillas Daily 3.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/GX1713.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.29.jpeg" alt="Zapatillas Run 60s 2.0">
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/H00354.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.38.jpeg" alt="Zapatillas Run 60s 2.0">
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/FZ0961.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.24.49.jpeg" alt="Zapatillas Run 60s 2.0">
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/H00355.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.49.jpeg" alt="Zapatillas Run 60s 2.0">                               
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-ny-90/JI1897.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.26.33.jpeg" alt="Zapatillas NY 90">
+                            </a>
+                            <p>Zapatillas NY 90</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 7 -->
+                    <div class="col-md-4 producto" data-precio="67000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-x_plr-path/JH6984.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.04.jpeg" alt="Zapatillas X_PLR Path">
+                            </a>
+                            <p>Zapatillas X_PLR Path</p>
+                            <p class="precio"><strong>$66.499</strong> <del>$94.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 8 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-advantage-base-2.0/JH8693.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.12.08.jpeg" alt="Zapatillas Advantage Base 2.0">
+                            </a>
+                            <p>Zapatillas Advantage Base 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 9 -->
+                    <div class="col-md-4 producto" data-precio="70000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-bravada-2.0-plataforma/JS2854.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.22.jpeg" alt="Zapatillas Bravada 2.0 Plataforma">
+                            </a>
+                            <p>Zapatillas Bravada 2.0 Plataforma</p>
+                            <p class="precio"><strong>$69.999</strong> <del>$99.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 10 -->
+                    <div class="col-md-4 producto" data-precio="81000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-racer-tr23/ID3055.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.33.jpeg" alt="Zapatillas Racer TR23">
+                            </a>
+                            <p>Zapatillas Racer TR23</p>
+                            <p class="precio"><strong>$80.499</strong> <del>$114.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 11 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-ny-90/GW7010.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.44.jpeg" alt="Zapatillas NY 90">
+                            </a>
+                            <p>Zapatillas NY 90</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 12 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-usa-84/GX4582.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.54.jpeg" alt="Zapatillas USA 84">
+                            </a>
+                            <p>Zapatillas USA 84</p>
+                            <p>4 colores disponibles</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 13 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-rivalry-low/FZ6327.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.28.41.jpeg" alt="Zapatillas Rivalry Low">
+                            </a>
+                            <p>Zapatillas Rivalry Low</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$160.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 14 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-centennial-rm/IG9110.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.28.52.jpeg" alt="Zapatillas Centennial RM">
+                            </a>
+                            <p>Zapatillas Centennial RM</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$160.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 15 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-centennial-rm/IH7873.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.29.02.jpeg" alt="Zapatillas Centennial RM">
+                            </a>
+                            <p>Zapatillas Centennial RM</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$169.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 16 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-rivalry-low/JH6723.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.29.12.jpeg" alt="Zapatillas Rivalry Low">
+                            </a>
+                            <p>Zapatillas Rivalry Low</p>
+                            <p>2 colores disponibles</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$160.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Producto 17 -->
+                    <div class="col-md-4 producto" data-precio="102000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-rapidmove-adv/HP3266.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.29.31.jpeg" alt="Zapatillas Rapidmove ADV">
+                            </a>
+                            <p>Zapatillas Rapidmove ADV</p>
+                            <p class="precio"><strong>$101.999</strong> <del>$169.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 1 -->
+                    <div class="col-md-4 producto" data-precio="150000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/air-jordan-1-zoom-comfort-2-dv1307-103/p" target="_blank">
+                            <img src="HTML/Imagenes Nike/WhatsApp Image 2025-06-09 at 22.21.25.jpeg" alt="Air Jordan 1 Zoom Comfort 2">
+                            </a>
+                            <p>Air Jordan 1 Zoom Comfort 2</p>
+                            <p class="precio"><strong>$149.999</strong> <del>$299.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="col-md-4 producto" data-precio="168000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/jordan-stadium-90-fn0584-200/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/WhatsApp Image 2025-06-09 at 22.29.08.jpeg" alt="Jordan Stadium 90">
+                            </a>
+                            <p>Jordan Stadium 90</p>
+                            <p class="precio"><strong>$167.999</strong> <del>$279.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="col-md-4 producto" data-precio="96000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/zapatillas-nike-downshifter-12-dd9293-001/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/620557-1200-1200.png" alt="Nike Downshifter 12">
+                            </a>
+                            <p>Nike Air Force 1 Low SP</p>
+                            <p class="precio"><strong>$95.999</strong> <del>$119.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="col-md-4 producto" data-precio="100000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-field-general-82-fq8762-101/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/WhatsApp Image 2025-06-09 at 22.33.46.jpeg" alt="Nike Field General '82">
+                            </a>
+                            <p>Nike Field General '82</p>
+                            <p class="precio"><strong>$99.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="col-md-4 producto" data-precio="120000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-attack-fn0648-300/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/WhatsApp Image 2025-06-09 at 22.35.42.jpeg" alt="Nike Attack">
+                            </a>
+                            <p>Nike Attack</p>
+                            <p class="precio"><strong>$119.999</strong> <del>$239.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="col-md-4 producto" data-precio="95000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-blazer-low-77-vintage-fq8060-801/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/WhatsApp Image 2025-06-09 at 22.40.33.jpeg" alt="Nike Blazer Low '77 Vintage">
+                            </a>
+                            <p>Nike Blazer Low '77 Vintage</p>
+                            <p class="precio"><strong>$94.999</strong> <del>$189.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 7 -->
+                    <div class="col-md-4 producto" data-precio="180000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-air-pegasus-2005-cor-hq5725-400/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/WhatsApp Image 2025-06-09 at 22.42.00.jpeg" alt="Nike Air Pegasus 2005 C.O.R.">
+                            </a>
+                            <p>Nike Air Pegasus 2005 C.O.R.</p>
+                            <p class="precio"><strong>$179.999</strong> <del>$299.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 8 -->
+                    <div class="col-md-4 producto" data-precio="96000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/zapatillas-nike-downshifter-12-dd9293-008/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/452441-1200-1200.png" alt="Nike Downshifter 12">
+                            </a>
+                            <p>Nike Downshifter 12</p>
+                            <p class="precio"><strong>$95.999</strong> <del>$119.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 9 -->
+                    <div class="col-md-4 producto" data-precio="112000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-air-max-systm-dm9537-104/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/659157-1200-1200.png" alt="Nike Air Max SYSTM">
+                            </a>
+                            <p>Nike Air Max SYSTM</p>
+                            <p class="precio"><strong>$111.999</strong> <del>$159.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 10 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-flex-experience-run-12-dv0740-004/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/907115-1200-1200.png" alt="Nike Flex Experience Run 12">
+                            </a>
+                            <p>Nike Flex Experience Run 12</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 11 -->
+                    <div class="col-md-4 producto" data-precio="132000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-sb-zoom-nyjah-3-premium-fv5718-001/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1140186-1200-1200.png" alt="Nike SB Zoom Nyjah 3 Premium">
+                            </a>
+                            <p>Nike SB Zoom Nyjah 3 Premium</p>
+                            <p class="precio"><strong>$131.999</strong> <del>$219.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 12 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-air-force-1-07-fq4296-100/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/996336-1200-1200.png" alt="Nike Air Force 1 '07">
+                            </a>
+                            <p>Nike Air Force 1 '07</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 13 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/air-jordan-1-low-se-hf4823-100/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/997228-1200-1200.png" alt="Air Jordan 1 Low SE">
+                            </a>
+                            <p>Air Jordan 1 Low SE</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 14 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-sb-dunk-low-pro-hf3063-002/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1310181-1200-1200.png" alt="Nike SB Dunk Low Pro">
+                            </a>
+                            <p>Nike SB Dunk Low Pro</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                            <!-- Producto 15 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-sb-dunk-low-pro-hf3704-800/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1066889-1200-1200.png" alt="Nike SB Dunk Low Pro">
+                            </a>
+                            <p>Nike SB Dunk Low Pro</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                            <!-- Producto 16 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-dunk-low-retro-dv0833-110/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1067170-1200-1200.png" alt="Nike Dunk Low Retro">
+                            </a>
+                            <p>Nike Dunk Low Retro</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                            <!-- Producto 17 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-air-force-1-07-next-nature-dc9486-102/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1055594-1200-1200.png" alt="Nike Air Force 1 '07 Next Nature">
+                            </a>
+                            <p>Nike Air Force 1 '07 Next Nature</p>
+                            <p>Zapatillas de Moda para Mujer</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                                            <!-- Producto 18 -->
+                    <div class="col-md-4 producto" data-precio="140000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-dunk-low-retro-dv0833-113/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1183172-1200-1200.png" alt="Nike Air Force 1 '07 Next Nature">
+                            </a>
+                            <p>Nike Dunk Low Retro</p>
+                            <p class="precio"><strong>$139.999</strong> <del>$199.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                                                <!-- Producto 19 -->
+                    <div class="col-md-4 producto" data-precio="180000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/air-jordan-1-zoom-cmft-2-dv1307-200/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1129219-1200-1200.png" alt="Air Jordan 1 Zoom CMFT 2">
+                            </a>
+                            <p>Air Jordan 1 Zoom CMFT 2</p>
+                            <p class="precio"><strong>$179.999</strong> <del>$299.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                                                <!-- Producto 20 -->
+                    <div class="col-md-4 producto" data-precio="198000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-air-max-dn-dv3337-010/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1173163-1200-1200.png" alt="Nike Air Max Dn">
+                            </a>
+                            <p>Nike Air Max Dn</p>
+                            <p class="precio"><strong>$197.999</strong> <del>$329.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                                                <!-- Producto 21 -->
+                    <div class="col-md-4 producto" data-precio="189000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-infinityrn-4-blueprint-hj6649-900/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1100174-1200-1200.png" alt="Nike InfinityRN 4 Blueprint">
+                            </a>
+                            <p>Nike InfinityRN 4 Blueprint</p>
+                            <p>Zapatillas de Running para Mujer</p>
+                            <p class="precio"><strong>$188.999</strong> <del>$314.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                                                <!-- Producto 22 -->
+                    <div class="col-md-4 producto" data-precio="150000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-air-footscape-woven-hf1759-400/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1111565-1200-1200.png" alt="Nike Air Footscape Woven">
+                            </a>
+                            <p>Nike Air Footscape Woven</p>
+                            <p>Zapatillas de Moda para Mujer</p>
+                            <p class="precio"><strong>$149.999</strong> <del>$299.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                                                                <!-- Producto 23 -->
+                    <div class="col-md-4 producto" data-precio="150000">
+                        <div class="producto-carta">
+                            <a href="https://www.nike.com.ar/nike-lunar-roam-hf4901-100/p" target="_blank">
+                                <img src="HTML/Imagenes Nike/1111421-1200-1200.png" alt="Nike Lunar Roam">
+                            </a>
+                            <p>Nike Lunar Roam</p>
+                            <p class="precio"><strong>$149.999</strong> <del>$299.999</del></p>
+                            <p>6 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 1 -->
+                    <div class="col-md-4 producto" data-precio="83000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-rs-x-new-games/395934.html?color=01" target="_blank">
+                            <img src="HTML/Imagenes puma/WhatsApp Image 2025-07-06 at 12.25.58.jpeg" alt="Puma RS-X New Games">
+                            </a>
+                            <p>Puma RS-X New Games</p>
+                            <p class="precio"><strong>$82.499</strong> <del>$164.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="col-md-4 producto" data-precio="83000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-mayze-para-mujer/380784.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/380784_01_sv01.png" alt="Puma Mayze para mujer">
+                            </a>
+                            <p>Puma Mayze para mujer</p>
+                            <p class="precio"><strong>$82.499</strong> <del>$159.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="col-md-4 producto" data-precio="95000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-rs-x-efekt/397405.html?color=02" target="_blank">
+                                <img src="HTML/Imagenes puma/WhatsApp Image 2025-06-07 at 12.37.23.jpeg" alt="Puma RS-X Efekt">
+                            </a>
+                            <p>Puma RS-X Efekt</p>
+                            <p class="precio"><strong>$94.999</strong> <del>$189.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="col-md-4 producto" data-precio="75000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-de-running-conduct-pro/310033.html?color=14" target="_blank">
+                                <img src="HTML/Imagenes puma/310033_14_sv01.png" alt="Puma Velophasis Play Loud">
+                            </a>
+                            <p>Puma Velophasis Play Loud</p>
+                            <p class="precio"><strong>$74.999</strong> <del>$124.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="col-md-4 producto" data-precio="95000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-puma-slipstream-lth/404753.html?color=02" target="_blank">
+                                <img src="HTML/Imagenes puma/WhatsApp Image 2025-06-09 at 21.51.51.jpeg" alt="Puma Slipstream lth">
+                            </a>
+                            <p>Puma Slipstream lth</p>
+                            <p class="precio"><strong>$95.000</strong> <del>$190.000</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="col-md-4 producto" data-precio="95000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-puma-slipstream/404752.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/WhatsApp Image 2025-06-09 at 21.51.57.jpeg" alt="Puma Slipstream">
+                            </a>
+                            <p>Puma Slipstream</p>
+                            <p class="precio"><strong>$95.000</strong> <del>$190.000</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 7 -->
+                    <div class="col-md-4 producto" data-precio="84000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-slipstream-unisex-bball-adp/394945.html?color=11" target="_blank">
+                                <img src="HTML/Imagenes puma/394945_11_sv01.png" alt="Puma Slipstream Unisex Bball ADP">
+                            </a>
+                            <p>Puma Slipstream Unisex Bball ADP</p>
+                            <p class="precio"><strong>$83.999</strong> <del>$139.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 8 -->
+                        <div class="col-md-4 producto" data-precio="84000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-blktop-rider-dusty/401255.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/401255_01_bv.png" alt="Puma Blktop Rider Dusty">
+                            </a>
+                            <p>Puma Blktop Rider Dusty</p>
+                            <p class="precio"><strong>$83.999</strong> <del>$139.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 9 -->
+                        <div class="col-md-4 producto" data-precio="90000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-palermo-saten-para-mujer/402319.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/402319_01_sv01.png" alt="Puma Palermo Satén para mujer">
+                            </a>
+                            <p>Puma Palermo Satén para mujer</p>
+                            <p class="precio"><strong>$89.999</strong> <del>$149.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 10 -->
+                        <div class="col-md-4 producto" data-precio="90000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-cali-court-cuero-para-mujer/393802.html?color=21" target="_blank">
+                                <img src="HTML/Imagenes puma/393802_21_sv01.png" alt="Puma Cali Court Cuero para mujer">
+                            </a>
+                            <p>Puma Cali Court Cuero para mujer</p>
+                            <p class="precio"><strong>$89.999</strong> <del>$149.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 11 -->
+                        <div class="col-md-4 producto" data-precio="93000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-palermo-elevata-mono-para-mujer/399676.html?color=02" target="_blank">
+                                <img src="HTML/Imagenes puma/399676_02_sv01.png" alt="Puma Palermo Elevata Mono para mujer">
+                            </a>
+                            <p>Puma Palermo Elevata Mono para mujer</p>
+                            <p class="precio"><strong>$92.999</strong> <del>$154.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 12 -->
+                        <div class="col-md-4 producto" data-precio="96000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-mayze-secret-garden-para-mujer/401262.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/401262_01_sv01.png" alt="Puma Mayze Secret Garden para mujer">
+                            </a>
+                            <p>Puma Mayze Secret Garden para mujer</p>
+                            <p class="precio"><strong>$95.999</strong> <del>$159.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 13 -->
+                        <div class="col-md-4 producto" data-precio="102000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-ca-luxe-elevated/401356.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/401356_01_sv01.png" alt="Puma CA Luxe Elevated">
+                            </a>
+                            <p>Puma CA Luxe Elevated</p>
+                            <p>3 colores disponibles</p>
+                            <p class="precio"><strong>$101.999</strong> <del>$169.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 14 -->
+                        <div class="col-md-4 producto" data-precio="111000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-gv-special-base/398507.html?color=06" target="_blank">
+                                <img src="HTML/Imagenes puma/398507_06_sv01.png" alt="Puma GV Special Base">
+                            </a>
+                            <p>Puma GV Special Base</p>
+                            <p class="precio"><strong>$110.999</strong> <del>$184.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 15 -->
+                        <div class="col-md-4 producto" data-precio="110000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-gv-special-laundry-boys-ii/399841.html?color=01" target="_blank">
+                                <img src="HTML/Imagenes puma/399841_01_sv01.png" alt="Puma GV Special Laundry Boys II">
+                            </a>
+                            <p>Puma GV Special Laundry Boys II</p>
+                            <p class="precio"><strong>$110.999</strong> <del>$184.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 16 -->
+                        <div class="col-md-4 producto" data-precio="117000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-de-gamuza-gv-special/398508.html?color=02" target="_blank">
+                                <img src="HTML/Imagenes puma/398508_02_sv01.png" alt="Puma gamuza GV Special">
+                            </a>
+                            <p>Puma gamuza GV Special</p>
+                            <p>3 colores disponibles</p>
+                            <p class="precio"><strong>$116.999</strong> <del>$194.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 17 -->
+                        <div class="col-md-4 producto" data-precio="138000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-inhale-colour-shifting/401665.html?color=02" target="_blank">
+                                <img src="HTML/Imagenes puma/401665_02_sv01.png" alt="Puma Inhale Colour Shifting">
+                            </a>
+                            <p>Puma Inhale Colour Shifting</p>
+                            <p class="precio"><strong>$137.999</strong> <del>$229.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                                        <!-- Producto 18 -->
+                        <div class="col-md-4 producto" data-precio="144000">
+                        <div class="producto-carta">
+                            <a href="https://ar.puma.com/pd/zapatillas-extos-collector/398109.html?color=03" target="_blank">
+                                <img src="HTML/Imagenes puma/398109_03_sv01.png" alt="Puma Extos Collector">
+                            </a>
+                            <p>Puma Extos Collector</p>
+                            <p class="precio"><strong>$143.999</strong> <del>$239.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center my-4">
+  <button id="cargarMas" class="btn btn-primary">Cargar más productos</button>
+    </div>
+    <!-- SCRIPT -->
+    <script>
+        const range = document.getElementById('priceRange');
+        const valueLabel = document.getElementById('rangeValue');
+
+        range.addEventListener('input', () => {
+            valueLabel.textContent = range.value;
+            const productos = document.querySelectorAll('.producto');
+            productos.forEach(prod => {
+                const precio = parseInt(prod.getAttribute('data-precio'));
+                prod.style.display = (precio <= range.value) ? 'block' : 'none';
+            });
+        });
+                function ordenarProductos() {
+    const productosContainer = document.getElementById("productos");
+    const productos = Array.from(document.querySelectorAll(".producto"));
+    const criterio = document.getElementById("orden").value;
+
+    productos.sort((a, b) => {
+        const precioA = parseInt(a.getAttribute("data-precio"));
+        const precioB = parseInt(b.getAttribute("data-precio"));
+        const nombreA = a.querySelector("p").textContent.trim();
+        const nombreB = b.querySelector("p").textContent.trim();
+
+        if (criterio === "precioAsc") return precioA - precioB;
+        if (criterio === "precioDesc") return precioB - precioA;
+        if (criterio === "nombreAsc") return nombreA.localeCompare(nombreB);
+        if (criterio === "nombreDesc") return nombreB.localeCompare(nombreA);
+    });
+
+    productos.forEach(p => productosContainer.appendChild(p));
+}
+
+  const buscador = document.getElementById('buscador');
+  buscador.addEventListener('input', () => {
+    const valor = buscador.value.toLowerCase();
+    const productos = document.querySelectorAll('.producto');
+
+    productos.forEach(prod => {
+      const nombre = prod.querySelector('p').textContent.toLowerCase();
+      prod.style.display = nombre.includes(valor) ? 'block' : 'none';
+    });
+  });
+
+  // Mostrar productos por tandas
+let productosMostrados = 0;
+const cantidadPorCarga = 8;
+const todosLosProductos = Array.from(document.querySelectorAll('.producto'));
+const btnCargar = document.getElementById('cargarMas');
+
+// Oculta todos al principio
+todosLosProductos.forEach(p => p.style.display = 'none');
+
+// Función para mostrar productos de a tandas
+function mostrarProductos() {
+  for (let i = productosMostrados; i < productosMostrados + cantidadPorCarga && i < todosLosProductos.length; i++) {
+    todosLosProductos[i].style.display = 'block';
+  }
+  productosMostrados += cantidadPorCarga;
+
+  if (productosMostrados >= todosLosProductos.length) {
+    btnCargar.style.display = 'none';
+  }
+}
+
+// Ejecutar la primera carga al cargar la página
+mostrarProductos();
+
+// Evento click para cargar más
+btnCargar.addEventListener('click', mostrarProductos);
+
+    
+    </script>
+
+<footer class="bg-light text-center py-3">
+    <p>&copy; 2025 DSTOP - Todos los derechos reservados</p>
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+</footer>
+
+<div>
+    <a href="https://wa.me/1153699165" class="whatsapp" target="_blank" title="¡Escribinos por WhatsApp!">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    </div>
+    
+</body>
+</html>

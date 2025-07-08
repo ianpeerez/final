@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DSTOP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="HTML/Imagenes/LOGO.jpg" type="image/jpg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="index.html">DSTOP</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+                <a class="nav-item nav-link" href="zapatillas.html">Todas las zapatillas</a>
+                <a class="nav-item nav-link" href="Nike.html">Zapatillas Nike</a>
+                <a class="nav-item nav-link" href="Puma.html">Zapatillas Puma</a>
+                <a class="nav-item nav-link" href="Contacto.html">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+        <!-- CONTENIDO -->
+    <div class="container-fluid mt-5 pt-5">
+        <h1 class="titulo-destacado">
+            Productos destacados de Adidas
+        </h1>
+        <div class="row">
+
+<!-- FILTRO Y ORDENAMIENTO -->
+<div class="col-md-3 sidebar">
+    <h4>Filtrar</h4>
+    <div class="mt-3">
+        <label for="priceRange">Precio máximo</label>
+        <input type="range" class="form-range" min="50000" max="200000" step="1000" id="priceRange">
+        <p>Hasta $<span id="rangeValue">200000</span></p>
+    </div>
+</div>
+
+<div class="col-md-9 mb-3 d-flex align-items-end justify-content-end">
+    <div>
+        <label for="orden">ORDENAR POR</label>
+        <select id="orden" class="form-control" style="width: 200px;" onchange="ordenarProductos()">
+            <option value="precioAsc">Precio: de bajo a alto</option>
+            <option value="precioDesc">Precio: de alto a bajo</option>
+            <option value="nombreAsc">Nombre: A-Z</option>
+            <option value="nombreDesc">Nombre: Z-A</option>
+        </select>
+    </div>
+</div>
+<div class="text-center mb-3">
+  <input type="text" id="buscador" class="form-control" placeholder="Buscar zapatillas..." style="max-width: 300px; margin: 0 auto;">
+</div>
+
+
+
+
+            <!-- PRODUCTOS -->
+            <div class="col-md-12">
+                <div class="row justify-content-center" id="productos">
+
+                    <!-- Producto 1 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-daily-3.0/FW7033.html" target="_blank">
+                            <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.15.jpeg" alt="Zapatillas Daily 3.0">
+                            </a>
+                            <p>Zapatillas Daily 3.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 2 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/GX1713.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.29.jpeg" alt="Zapatillas Run 60s 2.0">
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 3 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/H00354.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.38.jpeg" alt="Zapatillas Run 60s 2.0">
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 4 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/FZ0961.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.24.49.jpeg" alt="Zapatillas Run 60s 2.0">
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 5 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-run-60s-2.0/H00355.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.11.49.jpeg" alt="Zapatillas Run 60s 2.0">                               
+                            </a>
+                            <p>Zapatillas Run 60s 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 6 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-ny-90/JI1897.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.26.33.jpeg" alt="Zapatillas NY 90">
+                            </a>
+                            <p>Zapatillas NY 90</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 7 -->
+                    <div class="col-md-4 producto" data-precio="67000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-x_plr-path/JH6984.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.04.jpeg" alt="Zapatillas X_PLR Path">
+                            </a>
+                            <p>Zapatillas X_PLR Path</p>
+                            <p class="precio"><strong>$66.499</strong> <del>$94.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 8 -->
+                    <div class="col-md-4 producto" data-precio="63000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-advantage-base-2.0/JH8693.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.12.08.jpeg" alt="Zapatillas Advantage Base 2.0">
+                            </a>
+                            <p>Zapatillas Advantage Base 2.0</p>
+                            <p class="precio"><strong>$62.999</strong> <del>$89.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 9 -->
+                    <div class="col-md-4 producto" data-precio="70000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-bravada-2.0-plataforma/JS2854.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.22.jpeg" alt="Zapatillas Bravada 2.0 Plataforma">
+                            </a>
+                            <p>Zapatillas Bravada 2.0 Plataforma</p>
+                            <p class="precio"><strong>$69.999</strong> <del>$99.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 10 -->
+                    <div class="col-md-4 producto" data-precio="81000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-racer-tr23/ID3055.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.33.jpeg" alt="Zapatillas Racer TR23">
+                            </a>
+                            <p>Zapatillas Racer TR23</p>
+                            <p class="precio"><strong>$80.499</strong> <del>$114.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 11 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-ny-90/GW7010.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.44.jpeg" alt="Zapatillas NY 90">
+                            </a>
+                            <p>Zapatillas NY 90</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 12 -->
+                    <div class="col-md-4 producto" data-precio="91000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-usa-84/GX4582.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 19.40.54.jpeg" alt="Zapatillas USA 84">
+                            </a>
+                            <p>Zapatillas USA 84</p>
+                            <p>4 colores disponibles</p>
+                            <p class="precio"><strong>$90.999</strong> <del>$129.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 13 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-rivalry-low/FZ6327.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.28.41.jpeg" alt="Zapatillas Rivalry Low">
+                            </a>
+                            <p>Zapatillas Rivalry Low</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$160.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 14 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-centennial-rm/IG9110.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.28.52.jpeg" alt="Zapatillas Centennial RM">
+                            </a>
+                            <p>Zapatillas Centennial RM</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$160.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 15 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-centennial-rm/IH7873.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.29.02.jpeg" alt="Zapatillas Centennial RM">
+                            </a>
+                            <p>Zapatillas Centennial RM</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$169.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                    <!-- Producto 16 -->
+                    <div class="col-md-4 producto" data-precio="97000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-rivalry-low/JH6723.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.29.12.jpeg" alt="Zapatillas Rivalry Low">
+                            </a>
+                            <p>Zapatillas Rivalry Low</p>
+                            <p>2 colores disponibles</p>
+                            <p class="precio"><strong>$96.599</strong> <del>$160.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+
+                    <!-- Producto 17 -->
+                    <div class="col-md-4 producto" data-precio="102000">
+                        <div class="producto-carta">
+                            <a href="https://www.adidas.com.ar/zapatillas-rapidmove-adv/HP3266.html" target="_blank">
+                                <img src="HTML/Imagenes Adidas/WhatsApp Image 2025-07-07 at 20.29.31.jpeg" alt="Zapatillas Rapidmove ADV">
+                            </a>
+                            <p>Zapatillas Rapidmove ADV</p>
+                            <p class="precio"><strong>$101.999</strong> <del>$169.999</del></p>
+                            <p>3 cuotas sin interés</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center my-4">
+  <button id="cargarMas" class="btn btn-primary">Cargar más productos</button>
+    </div>
+    <!-- SCRIPT -->
+    <script>
+        const range = document.getElementById('priceRange');
+        const valueLabel = document.getElementById('rangeValue');
+
+        range.addEventListener('input', () => {
+            valueLabel.textContent = range.value;
+            const productos = document.querySelectorAll('.producto');
+            productos.forEach(prod => {
+                const precio = parseInt(prod.getAttribute('data-precio'));
+                prod.style.display = (precio <= range.value) ? 'block' : 'none';
+            });
+        });
+                function ordenarProductos() {
+    const productosContainer = document.getElementById("productos");
+    const productos = Array.from(document.querySelectorAll(".producto"));
+    const criterio = document.getElementById("orden").value;
+
+    productos.sort((a, b) => {
+        const precioA = parseInt(a.getAttribute("data-precio"));
+        const precioB = parseInt(b.getAttribute("data-precio"));
+        const nombreA = a.querySelector("p").textContent.trim();
+        const nombreB = b.querySelector("p").textContent.trim();
+
+        if (criterio === "precioAsc") return precioA - precioB;
+        if (criterio === "precioDesc") return precioB - precioA;
+        if (criterio === "nombreAsc") return nombreA.localeCompare(nombreB);
+        if (criterio === "nombreDesc") return nombreB.localeCompare(nombreA);
+    });
+
+    productos.forEach(p => productosContainer.appendChild(p));
+}
+
+  const buscador = document.getElementById('buscador');
+  buscador.addEventListener('input', () => {
+    const valor = buscador.value.toLowerCase();
+    const productos = document.querySelectorAll('.producto');
+
+    productos.forEach(prod => {
+      const nombre = prod.querySelector('p').textContent.toLowerCase();
+      prod.style.display = nombre.includes(valor) ? 'block' : 'none';
+    });
+  });
+
+  // Mostrar productos por tandas
+let productosMostrados = 0;
+const cantidadPorCarga = 8;
+const todosLosProductos = Array.from(document.querySelectorAll('.producto'));
+const btnCargar = document.getElementById('cargarMas');
+
+// Oculta todos al principio
+todosLosProductos.forEach(p => p.style.display = 'none');
+
+// Función para mostrar productos de a tandas
+function mostrarProductos() {
+  for (let i = productosMostrados; i < productosMostrados + cantidadPorCarga && i < todosLosProductos.length; i++) {
+    todosLosProductos[i].style.display = 'block';
+  }
+  productosMostrados += cantidadPorCarga;
+
+  if (productosMostrados >= todosLosProductos.length) {
+    btnCargar.style.display = 'none';
+  }
+}
+
+// Ejecutar la primera carga al cargar la página
+mostrarProductos();
+
+// Evento click para cargar más
+btnCargar.addEventListener('click', mostrarProductos);
+
+
+    </script>
+<footer class="bg-light text-center py-3">
+    <p>&copy; 2025 DSTOP - Todos los derechos reservados</p>
+    <a href="https://instagram.com" target="_blank">Instagram</a> |
+    <a href="https://facebook.com" target="_blank">Facebook</a>
+</footer>
+
+<div>
+    <a href="https://wa.me/1153699165" class="whatsapp" target="_blank" title="¡Escribinos por WhatsApp!">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+    </a>
+    </div>
+    
+</body>
+</html>
